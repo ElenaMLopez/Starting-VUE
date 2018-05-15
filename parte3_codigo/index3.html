@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VUE 1</title>
+  </head>
+  <body>
+    <main>
+      <ul>
+        <li v-for="dia in laborables"> {{dia}} </li>
+      </ul>
+      <h2> Tareas: </h2>
+      <ul>
+        <li v-for="tarea in tareas"> {{ tarea.nombre}} con prioridad {{tarea.prioridad}} </li>
+      </ul>
+      <h2>Persona</h2>
+      <ul>
+        <li v-for="(value, key, index) in persona"> {{key}}: {{value}}</li>
+      </ul>
+
+      <pre> {{$data}}</pre>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
+    <script src="main3.js" charset="utf-8"></script>
+  </body>
+</html>

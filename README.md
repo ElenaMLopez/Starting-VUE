@@ -1,2 +1,3 @@
-# Starting-VUE
-Notas y prácticas del curso de vue
+# Curso de VUE
+
+Prácticas y apuntes del curso de VUE de [Juan Andrés Núñez](https://github.com/juanwmedia).

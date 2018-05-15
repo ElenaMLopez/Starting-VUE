@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VUE 1</title>
+  </head>
+  <body>
+    <main>
+      <h1 v-show="conectado"> Estoy conectado</h1>
+      <h2 v-if="edad < 18"> No puedes entrar enano!!! </h2>
+      <h2 v-else-if="edad > 200"> Eres inmortal!!! </h2>
+      <h2 v-else> Puedes entrar </h2>
+      <!-- Ponemos un elemento template con un v-if que afecta a TODO su contenido -->
+      <template v-if="conectado">
+        <ul>
+          <li> <a href="#"> Elemento 1</a> </li>
+          <li> <a href="#"> Elemento 2</a> </li>
+          <li> <a href="#"> Elemento 3</a> </li>
+        </ul>
+      </template>
+      <h4 v-else> NO ESTÁS CONECTADO!!!</h4>
+
+
+      <pre> {{ $data }}</pre>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
+    <script src="main2.js" charset="utf-8"></script>
+  </body>
+</html>
