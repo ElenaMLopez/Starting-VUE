@@ -10,8 +10,15 @@
       <h2> {{mensaje}} </h2>
       <h3> Lista de tareas: </h3>
       <ul>
-        <li v-for="tarea in tareas"> {{tarea}} </li>
+        <li v-for="tarea in tareas"> {{tarea.titulo}} </li>
       </ul>
+      <h3> Lista de tareas con prioridad </h3>
+      <ul>
+        <li v-for="tarea in tareasConPrioridad"> {{tarea.titulo}} </li>
+      </ul>
+      <h3> Tareas por antiguedad </h3>
+      <li v-for="tarea in tareasPorAntiguedad"> {{tarea.titulo}} </li>
+
       <form v-on:submit.prevent="agregarTarea">
         <input v-model="nuevaTarea" type="text" placeholder="Introduce una tarea"> </input>
         <input type="submit" value="Enviar tarea">
