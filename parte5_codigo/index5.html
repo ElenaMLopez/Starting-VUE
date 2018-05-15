@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VUE 1</title>
+  </head>
+  <body>
+    <main>
+      <h3> Lista de tareas: </h3>
+      <ul>
+        <li v-for="tarea in tareas"> {{tarea}} </li>
+      </ul>
+      <form v-on:submit.prevent="agregarTarea">
+        <input v-model="nuevaTarea" type="text" placeholder="Introduce una tarea"> </input>
+        <input type="submit" value="Enviar tarea">
+      </form>
+  
+      <pre> {{$data}}</pre>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
+    <script src="main5.js" charset="utf-8"></script>
+  </body>
+</html>
