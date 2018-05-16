@@ -1,7 +1,10 @@
+Vue.filter('alReves', (valor) => valor.split('').reverse().join(''));
+
 const vm = new Vue({
   el: 'main',
 
   data:{
+    busqueda: '',
     minimo: 5,
     juegos: [
       {
@@ -24,6 +27,8 @@ const vm = new Vue({
     mejoresJuegos() {
       return this.juegos.filter((juego) => juego.puntuacion >= this.minimo);
     },
+    buscarJuego() {
+      return this.juegos.filter((juego) => juego.titulo.includes(this.busqueda));
+    }
   }
-
 })

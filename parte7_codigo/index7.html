@@ -7,10 +7,11 @@
   <body>
     <main>
       <h1> Lista de juegos </h1>
-
+      <input type="search" v-model="busqueda" placeholder="Buscar Juego">
       <ul>
-        <li v-for="juego in mejoresJuegos"> {{juego.titulo}} </li>
+        <li v-for="juego in buscarJuego"> {{juego.titulo | alReves}} </li>
       </ul>
+      <input type="range" min="0" max="10" v-model="minimo"> <!-- Hace variar la propiedad minimo del modelo -->
       <hr>
       <pre> {{$data}}</pre>
     </main>
