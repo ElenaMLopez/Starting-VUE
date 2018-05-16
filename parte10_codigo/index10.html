@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VUE 1</title>
+    <style>
+      li{
+        cursor: pointer;
+      }
+      .completado {
+        color: #078b00;
+        text-decoration: line-through;
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <h2> Tareas Completadas en total: {{tareasCompletadas.length}}</h2>
+      <h1> Tareas </h1>
+      <ul>
+        <li v-bind:class="{completado: tarea.completado}"
+            v-on:click="completarTarea(tarea)"
+            v-for="tarea in tareas"> <!-- Se puede usar @click como directiva -->
+              {{tarea.titulo}}: {{tarea.completado}}
+      </li>
+      </ul>
+
+      <hr>
+      <pre> {{$data}}</pre>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
+    <script src="main9.js" charset="utf-8"></script>
+  </body>
+</html>
