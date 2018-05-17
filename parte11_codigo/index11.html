@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>VUE 1</title>
+
+  </head>
+  <body>
+    <main>
+      <img v-for="persona in personas"
+      v-bind:src="persona.picture.thumbnail"
+      :alt="persona.name.first">
+      <hr>
+      <pre> {{$data}}</pre>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.0"></script>
+
+    <script src="main11.js" charset="utf-8"></script>
+  </body>
+</html>
