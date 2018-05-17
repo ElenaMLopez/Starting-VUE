@@ -2,28 +2,13 @@ const vm1 = new Vue({
   el: 'main',
   completadas: [],
   data: {
-    tareas: [
-        {
-          titulo:'Hacer la compra',
-          completado: false,
-        },
-        {
-          titulo:'Aprender Vue.js',
-          completado: false,
-        },
-        {
-          titulo:'Aprender Firebase',
-          completado: false,
-        },
-        {
-          titulo:'Dominar ES6',
-          completado: false,
-        },
-        {
-        titulo:'Salir a patinar',
-        completado: false,
-        },
-      ],
+    mostrar: true,
+    mensajes: {
+      transicion: 'Trancisiones CSS con Vue.js',
+      animacion: 'Animaciones CSS con Vue.js',
+      animationCustom: 'Animaciones custom CSS con Vue.js',
+      entreElementos: 'Transiciones entre elementos con Vue.js',
+    }
   },
 
   methods: {

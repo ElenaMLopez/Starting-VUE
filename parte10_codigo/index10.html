@@ -3,28 +3,57 @@
   <head>
     <meta charset="utf-8">
     <title>VUE 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
     <style>
-      li{
-        cursor: pointer;
+    /* Transition */
+    .aparecer-enter-active, .aparecer-leave-active {
+      transition: opacity 2s;
+    }
+    .aparecer-enter, .aparecer-leave-to {
+      opacity: 0;
+    }
+    /* Animation */
+    .bote-enter-active {
+      animation: bounce-in .5s;
+    }
+    .bote-leave-active {
+      animation: bounce-in .5s reverse;
+    }
+    @keyframes bounce-in {
+      0% {
+        transform: scale(0);
       }
-      .completado {
-        color: #078b00;
-        text-decoration: line-through;
+      50% {
+        transform: scale(1.5);
       }
-
+      100% {
+        transform: scale(1);
+      }
+    }
     </style>
   </head>
   <body>
     <main>
-      <h2> Tareas Completadas en total: {{tareasCompletadas.length}}</h2>
-      <h1> Tareas </h1>
-      <ul>
-        <li v-bind:class="{completado: tarea.completado}"
-            v-on:click="completarTarea(tarea)"
-            v-for="tarea in tareas"> <!-- Se puede usar @click como directiva -->
-              {{tarea.titulo}}: {{tarea.completado}}
-      </li>
-      </ul>
+      <button @click="mostrar = !mostrar"> Mostrar/Ocultar </button>
+      <!-- Transition -->
+      <transition name="aparecer" appear>
+        <h1 v-if="mostrar" v-text="mensajes.transicion"></h1>
+      </transition>
+      <!-- Animation con Vue.js -->
+      <transition name="bote">
+        <h1 v-if="mostrar" v-text="mensajes.animacion"></h1>
+      </transition>
+      <!-- Animation con librería Animate.css-->
+      <transition name="animate.css"
+        enter-active-class="animated rotateInUpLeft"
+        leave-active-class="animated zoomOutUp">
+        <h1 v-if="mostrar" v-text="mensajes.animationCustom"></h1>
+      </transition>
+      <!-- Transiciones entre diferentes elementos -->
+      <transition name="aparecer" mode="out-in">
+        <h1 v-if="mostrar" v-text="mensajes.entreElementos" key="aparecer" ></h1>
+        <h1 v-else key="ocultar"> No hay mensaje!!! </h1>
+      </transition>
 
       <hr>
       <pre> {{$data}}</pre>
@@ -32,6 +61,6 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
-    <script src="main9.js" charset="utf-8"></script>
+    <script src="main10.js" charset="utf-8"></script>
   </body>
 </html>
