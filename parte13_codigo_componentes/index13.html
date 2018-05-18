@@ -7,15 +7,21 @@
   </head>
   <body>
     <main>
-      <img v-for="persona in personas"
-      v-bind:src="persona.picture.thumbnail"
-      :alt="persona.name.first">
+    <!-- <ul>
+      <li v-for="tarea in tareasAjax" v-text="tarea.title"> </li>
+    </ul> -->
+
+    <mis-tareas></mis-tareas>
+
+
       <hr>
       <pre> {{$data}}</pre>
 
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <script src="main13.js" charset="utf-8"></script>
   </body>
 </html>
