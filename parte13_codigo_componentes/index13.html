@@ -7,12 +7,8 @@
   </head>
   <body>
     <main>
-    <!-- <ul>
-      <li v-for="tarea in tareasAjax" v-text="tarea.title"> </li>
-    </ul> -->
 
-    <mis-tareas></mis-tareas>
-
+      <mis-tareas :tareas="tareasAjax"></mis-tareas>
 
       <hr>
       <pre> {{$data}}</pre>

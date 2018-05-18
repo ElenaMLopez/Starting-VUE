@@ -1,6 +1,7 @@
 Vue.component('mis-tareas', {
+  props: ['tareas'],
   template: `<ul>
-              <li v-for="tarea in tareasAjax" v-text="tarea.title"> </li>
+              <li v-for="tarea in tareas" v-text="tarea.title"></li>
             </ul>`,
 })
 
@@ -10,7 +11,6 @@ const vm = new Vue({
   mounted(){
     axios.get('https://jsonplaceholder.typicode.com/todos')
       .then((respuesta) => {
-        console.log(respuesta);
         this.tareasAjax = respuesta.data
       })
   },
