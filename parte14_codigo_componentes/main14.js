@@ -1,6 +1,6 @@
 Vue.component('elegir-ganador', {
   props: ['listado'],
-  template: '#elegir-ganador-template'
+  //template: '#elegir-ganador-template'
             // `
             //   <div>
             //     <h1 v-if="ganador"> El ganador es: {{ ganador }}</h1>
@@ -15,7 +15,7 @@ Vue.component('elegir-ganador', {
             //     <button @click="elegirGanador"> Elegir Ganador </button>
             //   </div>
             // `
-            ,
+          //  ,
   methods: {
     elegirGanador() {
       let cantidad = this.participantes.length;
