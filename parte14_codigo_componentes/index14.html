@@ -11,6 +11,20 @@
       <pre> {{$data}}</pre>
 
     </main>
+    <template id="elegir-ganador-template">
+      <div>
+        <h1 v-if="ganador"> El ganador es: {{ ganador }}</h1>
+
+        <template v-else>
+          <h1> Participantes: </h1>
+          <ul>
+            <li v-for="persona in listado" v-text="persona">
+            </li>
+          </ul>
+        </template>
+        <button @click="elegirGanador"> Elegir Ganador </button>
+      </div>
+    </template>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
     <script src="main14.js" charset="utf-8"></script>
