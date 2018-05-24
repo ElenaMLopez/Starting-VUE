@@ -1,5 +1,25 @@
 Vue.component('candidato', {
-  props: ['nombre', 'mail', 'imagen'],
+  // props: ['nombre', 'mail', 'imagen'],
+  props: {
+    nombre: {
+      type: String,
+      required: true,
+    },
+    mail: {
+      type: String,
+      required: false,
+      default: 'mail.defaul@default.com'
+    },
+    imagen: String,
+    location: {
+      type: Object,
+      default() {
+        return {
+          ciudad: 'Copenague',
+        }
+      }
+    },
+  },
   template: '#candidato-template',
 })
 

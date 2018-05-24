@@ -9,7 +9,8 @@
       <candidato v-for="candidato in candidatos"
         :nombre="candidato.name.first"
         :mail="candidato.email"
-        :imagen="candidato.picture.thumbnail">
+        :imagen="candidato.picture.thumbnail"
+        :location="candidato.location">
 
       <pre> {{$data}}</pre>
     </main>
@@ -18,10 +19,15 @@
         <img src="imagen" align="right" alt="nombre">
         <h1> {{ nombre }}</h1>
         <h2> {{ mail }}</h2>
+        <ul>
+          <li v-for="(value, key, index) in location"> {{ value }} </li>
+        </ul>
         <hr>
       </blockquote>
     </template>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <script src="main16.js" charset="utf-8"></script>
   </body>
 </html>
