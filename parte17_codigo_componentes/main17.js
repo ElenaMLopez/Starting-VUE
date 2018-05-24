@@ -1,7 +1,7 @@
 Vue.component('candidato', {
   props:['tipo', 'posicion'],
   template: `<section class="alerta" :class="[tipo, posicion]">
-              <header>
+              <header class="alerta_header">
                 CUCU header
               </header>
               <div class="alerta_contenido">

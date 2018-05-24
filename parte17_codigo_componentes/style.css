@@ -1,1 +1,37 @@
-/* Styles */
+/* Bloques */
+
+.alerta {
+  width: 300px;
+  border-radius: 15px;
+  background-color: lightgray;
+  border: 1px solid white;
+  box-shadow: 1px 1px 2px gray;
+  font-family: sans-serif;
+  position: absolute;
+}
+
+/* Elementos */
+.alerta_header {
+  border-bottom: 1px solid white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.alerta_contenido {
+  font-size: 14px;
+  padding: 20px;
+}
+.alerta_footer {
+  border-top: 1px solid white;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+/* Modificadores */
+/*Estilo*/
+.alerta--error {
+  background-color: indianred;
+}
+.alerta--advertencia {
+  background-color: lightgoldenrodyellow;
+}
