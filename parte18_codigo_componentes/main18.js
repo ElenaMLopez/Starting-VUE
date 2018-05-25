@@ -1,24 +1,18 @@
-Vue.component('alerta', {
-  props:['tipo', 'posicion'],
-  template: `<section class="alerta" :class="[tipo, posicion]">
-              <header class="alerta_header">
-                <slot name="header">
-                  CUCU header (desde slot)
-                </slot>
-              </header>
-              <div class="alerta_contenido">
-                <slot>
-                   Contenido del Slot anónimo
-                </slot>
-              </div>
-              <footer class="alerta_footer">
-                <slot name="footer">
-                  Footeeerrrrr!!! Silly text (desde slot)
-                </slot>
-              </footer>
-            </section>`,
+Vue.component('mis-tareas', {
+  props:['listado'],
+  template: '#mis-tareas-template'
 });
 
 new Vue({
   el: 'main',
+  data: {
+    tareas: [
+      { titulo: 'Salir a Patinar'},
+      { titulo: 'Llamar a Thomas'},
+      { titulo: 'Backlog de proyecto Tedra'},
+      { titulo: 'Llevar portadas para firmas'},
+      { titulo: 'Avisar en el master que hoy no voy'},
+      { titulo: 'Quedar con Silvia'},
+    ],
+  }
 });
