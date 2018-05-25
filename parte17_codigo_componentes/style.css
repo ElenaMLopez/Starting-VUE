@@ -35,3 +35,21 @@
 .alerta--advertencia {
   background-color: lightgoldenrodyellow;
 }
+
+/* Posición */
+.alerta--arriba-izquierda {
+  left: 0;
+  top: 0;
+}
+.alerta--abajo-izquierda {
+  left: 0;
+  bottom: 0;
+}
+.alerta--arriba-derecha {
+  right: 0;
+  top: 0;
+}
+.alerta--abajo-derecha {
+  right: 0;
+  bottom: 0;
+}

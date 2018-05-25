@@ -1,4 +1,4 @@
-Vue.component('candidato', {
+Vue.component('alerta', {
   props:['tipo', 'posicion'],
   template: `<section class="alerta" :class="[tipo, posicion]">
               <header class="alerta_header">
