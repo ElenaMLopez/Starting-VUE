@@ -2,13 +2,19 @@ Vue.component('alerta', {
   props:['tipo', 'posicion'],
   template: `<section class="alerta" :class="[tipo, posicion]">
               <header class="alerta_header">
-                CUCU header
+                <slot name="header">
+                  CUCU header (desde slot)
+                </slot>
               </header>
               <div class="alerta_contenido">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...
+                <slot>
+                   Contenido del Slot anónimo
+                </slot>
               </div>
               <footer class="alerta_footer">
-                  Footeeerrrrr!!! Silly text
+                <slot name="footer">
+                  Footeeerrrrr!!! Silly text (desde slot)
+                </slot>
               </footer>
             </section>`,
 });

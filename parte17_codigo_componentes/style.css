@@ -35,6 +35,10 @@
 .alerta--advertencia {
   background-color: lightgoldenrodyellow;
 }
+.alerta--exito {
+  background-color: rgb(3, 107, 0);
+  color: rgb(224, 224, 224);
+}
 
 /* Posición */
 .alerta--arriba-izquierda {
