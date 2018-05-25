@@ -7,10 +7,23 @@
   </head>
   <body>
     <main>
+      <!-- Alerta exito -->
       <alerta tipo="alerta--exito" posicion="alerta--arriba-derecha">
         <template slot="header">  Contenido del HTML. Todo OK </template>
-        <template> Contenido de la alerta del HTML </template>
+        <template> Contenido de la alerta-exito del HTML </template>
         <template slot="footer">  Contenido del HTML footer  </template>
+      </alerta>
+      <!-- Alerta advertencia -->
+      <alerta tipo="alerta--advertencia" posicion="alerta--arriba-izquierda">
+        <template slot="header">  Advertencia desde del HTML. Uy uy uy</template>
+        <template> UY UY UY desde el HTML! </template>
+        <template slot="footer">  Footer de advertencia del HTML  </template>
+      </alerta>
+      <!-- Alerta error -->
+      <alerta tipo="alerta--error" posicion="alerta--abajo-derecha">
+        <template slot="header">  Desde HTML te digo que lio </template>
+        <template> ¡¡¡Ha comenzado el advenimiento zombie!!! </template>
+        <template slot="footer">  Todo lo dicho desde HTML  </template>
       </alerta>
     </main>
 
