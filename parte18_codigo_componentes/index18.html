@@ -10,6 +10,17 @@
         <template scope="datos">
           <li> {{ datos.title }}</li>
         </template>
+      </mis-tareas>
+      <mis-tareas :listado="tareas">
+        <template scope="datos">
+          <li> 🐱 {{ datos.title }}</li>
+        </template>
+      </mis-tareas>
+      <mis-tareas :listado="tareas">
+        <template scope="datos">
+          <li><h1> 🐱 {{ datos.title }} </h1></li>
+        </template>
+      </mis-tareas>
     </main>
 
     <template id="mis-tareas-template">
