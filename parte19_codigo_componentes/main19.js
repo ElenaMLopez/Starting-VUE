@@ -2,6 +2,7 @@ Vue.component('alerta', {
   props:['tipo', 'posicion'],
   template: `<section class="alerta" :class="[tipo, posicion]">
               <header class="alerta_header">
+                <a href="#" @click="ocultarWidget"> Cerrar </a>
                 <slot name="header">
                   CUCU header (desde slot)
                 </slot>
@@ -17,8 +18,18 @@ Vue.component('alerta', {
                 </slot>
               </footer>
             </section>`,
+  methods: {
+    ocultarWidget() {
+      this.$emit('ocultar');
+    },
+  }
 });
 
 new Vue({
   el: 'main',
+  data: {
+    mostrarExito: false,
+    mostrarAdvertencia: false,
+    mostrarError: false,
+  }
 });

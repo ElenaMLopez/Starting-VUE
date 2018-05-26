@@ -7,24 +7,33 @@
   </head>
   <body>
     <main>
+      <!-- Botones para mostrar mensajes -->
+      <button @click="mostrarExito = true" type="button"> Mostrar Exito </button>
+      <button @click="mostrarAdvertencia = true"type="button"> Mostrar Advertencia</button>
+      <button @click="mostrarError = true"type="button"> Mostrar Error (no pulsar X) </button>
+
+
       <!-- Alerta exito -->
-      <alerta tipo="alerta--exito" posicion="alerta--arriba-derecha">
+      <alerta @ocultar="mostrarExito = false" v-show="mostrarExito" tipo="alerta--exito" posicion="alerta--arriba-derecha">
         <template slot="header">  Contenido del HTML. Todo OK </template>
         <template> Contenido de la alerta-exito del HTML </template>
         <template slot="footer">  Contenido del HTML footer  </template>
       </alerta>
       <!-- Alerta advertencia -->
-      <alerta tipo="alerta--advertencia" posicion="alerta--arriba-izquierda">
+      <alerta @ocultar="mostrarAdvertencia = false" v-show="mostrarAdvertencia" tipo="alerta--advertencia" posicion="alerta--arriba-izquierda">
         <template slot="header">  Advertencia desde del HTML. Uy uy uy</template>
         <template> UY UY UY desde el HTML! </template>
         <template slot="footer">  Footer de advertencia del HTML  </template>
       </alerta>
       <!-- Alerta error -->
-      <alerta tipo="alerta--error" posicion="alerta--abajo-derecha">
+      <alerta @ocultar="mostrarError = false" v-show="mostrarError" tipo="alerta--error" posicion="alerta--abajo-derecha">
         <template slot="header">  Desde HTML te digo que lio </template>
         <template> ¡¡¡Ha comenzado el advenimiento zombie!!! </template>
         <template slot="footer">  Todo lo dicho desde HTML  </template>
       </alerta>
+
+
+      <pre>{{ $data }}</pre>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
