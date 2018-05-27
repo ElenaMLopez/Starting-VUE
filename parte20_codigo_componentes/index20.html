@@ -2,41 +2,19 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style_20.css">
     <title>VUE 1</title>
-    <link rel="stylesheet" href="style_19.css">
   </head>
   <body>
     <main>
-      <!-- Botones para mostrar mensajes -->
-      <button @click="mostrarExito = true" type="button"> Mostrar Exito </button>
-      <button @click="mostrarAdvertencia = true"type="button"> Mostrar Advertencia</button>
-      <button @click="mostrarError = true"type="button"> Mostrar Error (no pulsar X) </button>
-
-
-      <!-- Alerta exito -->
-      <alerta @ocultar="mostrarExito = false" v-show="mostrarExito" tipo="alerta--exito" posicion="alerta--arriba-derecha">
-        <template slot="header">  Contenido del HTML. Todo OK </template>
-        <template> Contenido de la alerta-exito del HTML </template>
-        <template slot="footer">  Contenido del HTML footer  </template>
-      </alerta>
-      <!-- Alerta advertencia -->
-      <alerta @ocultar="mostrarAdvertencia = false" v-show="mostrarAdvertencia" tipo="alerta--advertencia" posicion="alerta--arriba-izquierda">
-        <template slot="header">  Advertencia desde del HTML. Uy uy uy</template>
-        <template> UY UY UY desde el HTML! </template>
-        <template slot="footer">  Footer de advertencia del HTML  </template>
-      </alerta>
-      <!-- Alerta error -->
-      <alerta @ocultar="mostrarError = false" v-show="mostrarError" tipo="alerta--error" posicion="alerta--abajo-derecha">
-        <template slot="header">  Desde HTML te digo que lio </template>
-        <template> ¡¡¡Ha comenzado el advenimiento zombie!!! </template>
-        <template slot="footer">  Todo lo dicho desde HTML  </template>
-      </alerta>
-
+      <listado-productos :productos="productos" class="lista">
+      </listado-productos>
+      <carrito-compra class="carrito"></carrito-compra>
 
       <pre>{{ $data }}</pre>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
-    <script src="main19.js" charset="utf-8"></script>
+    <script src="main20.js" charset="utf-8"></script>
   </body>
 </html>
