@@ -6,15 +6,17 @@
   </head>
   <body>
     <main>
-      <button type="button"> Lista tareas </button>
-      <button type="button"> Contacto </button>
-      <button type="button"> Biografía </button>
+      <button @click="seleccionado = 'lista-tareas'" type="button"> Lista tareas </button>
+      <button @click="seleccionado = 'contacto'" type="button"> Contacto </button>
+      <button @click="seleccionado = 'bio'"type="button"> Biografía </button>
 
-      <lista-tareas></lista-tareas>
+      <component :is="seleccionado"></component>
+
+      <!-- Esta sería la declaración habitual, pero la dejamos comentada
+      tan solo para tenerla como referencia: -->
+      <!-- <lista-tareas></lista-tareas>
       <contacto></contacto>
-      <bio></bio>
-
-      <pre>{{ $data }}</pre>
+      <bio></bio> -->
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
