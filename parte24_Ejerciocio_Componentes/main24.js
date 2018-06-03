@@ -20,6 +20,11 @@ Vue.component('usuarios', {
     }
   }
 });
+Vue.component('usuario', {
+  props:['datos'],
+  template: '#usuario-template',
+
+})
 
 new Vue({
   el: 'main',

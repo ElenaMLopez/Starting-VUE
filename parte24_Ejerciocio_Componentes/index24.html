@@ -8,6 +8,7 @@
   <body>
     <main>
       <usuarios>
+        <h1>Usuarios de empresa</h1>
       </usuarios>
     </main>
 <!-- Templates -->
@@ -18,11 +19,22 @@
           <input type="search" placeholder="Filtrar Usuario">
         </section>
         <hr>
-        <section>
-          <p v-for="usuario in usuarios"> {{ usuario }} </p>
+        <section class="usuarios">
+          <usuario :datos="user" v-for="user in usuarios"></usuario>
         </section>
       </div>
     </template>
+    <template id="usuario-template">
+      <div class="usuario">
+        <img align="left" :src="datos.foto" :alt="datos.nombre">
+        <section>
+          <h2> {{ datos.nombre }}</h2>
+          <small> {{ datos.email }} </small>
+        </section>
+
+      </div>
+    </template>
+
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
