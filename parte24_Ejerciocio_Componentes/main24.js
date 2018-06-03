@@ -1,27 +1,26 @@
-Vue.component ('contrasena', {
-  props: ['contrasena'],
-  template: `<div>
-              <label for="miInput"> Contraseña </label>
-              <input ref="pass" id="miInput" :value="contrasena" @input="comprobarContrasena($event.target.value)">
-            </div>`,
-  methods: {
-    comprobarContrasena(contrasena) {
-      if(this.noValidas.includes(contrasena)) {
-        this.$refs.pass.value = contrasena = '';
-      }
-        this.$emit('input', contrasena);
-    }
+Vue.component('usuarios', {
+  template: '#usuarios-template',
+  mounted(){
+    axios.get('https://randomuser.me/api/?results=50')
+      .then((datos)=> {
+        console.log(datos);
+        const listado = datos.data.results.map((usuario) => {
+          return {
+            nombre: `${usuario.name.title} ${usuario.name.first} ${usuario.name.last}`,
+            email: usuario.email,
+            foto: usuario.picture.medium,
+          }
+        });
+      this.usuarios = listado;
+      })
   },
-  data() {
+  data(){
     return {
-      noValidas: ['abc', 'admin', 'root'],
+      usuarios: [],
     }
   }
 });
 
 new Vue({
-  el:'main',
-  data: {
-    contrasena: 'LaContraseña',
-  }
+  el: 'main',
 })

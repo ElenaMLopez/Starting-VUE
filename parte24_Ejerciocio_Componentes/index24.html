@@ -2,14 +2,30 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>VUE 1</title>
+    <title>EMPOYER SEARCH</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main>
-      <!-- <input v-model="contraseña" type="text"> -->
-      <contrasena> </contrasena>
+      <usuarios>
+      </usuarios>
     </main>
+<!-- Templates -->
+    <template id="usuarios-template">
+      <div>
+        <section class="cabecera">
+          <slot></slot>
+          <input type="search" placeholder="Filtrar Usuario">
+        </section>
+        <hr>
+        <section>
+          <p v-for="usuario in usuarios"> {{ usuario }} </p>
+        </section>
+      </div>
+    </template>
+
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main24.js" charset="utf-8"></script>
   </body>
 </html>
