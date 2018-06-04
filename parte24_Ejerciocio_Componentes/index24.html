@@ -16,11 +16,11 @@
       <div>
         <section class="cabecera">
           <slot></slot>
-          <input type="search" placeholder="Filtrar Usuario">
+          <input type="search" placeholder="Filtrar Usuario"  v-model="busqueda">
         </section>
         <hr>
         <section class="usuarios">
-          <usuario :datos="user" v-for="user in usuarios"></usuario>
+          <usuario :datos="user" v-for="user in filtrarUsuarios"></usuario>
         </section>
       </div>
     </template>

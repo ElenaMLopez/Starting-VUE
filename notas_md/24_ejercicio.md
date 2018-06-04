@@ -105,3 +105,6 @@ Vue.component('usuario', {
   </div>
 </template>
 ```
+
+  Ya solo queda hacer el formulario de búsqueda. Para ello vamos a usar una Computed Propertie que hará de filtro, para gestionarlo.
+  En el modelo del componente principal, definimos una nueva propiedad que será la palabra buscada, y está inicializada, vacía. Asociamos el input con el modelo mediante *v-model*,  y luego definimos una Computed Propertie que va a filtrar los usuarios.
