@@ -86,4 +86,22 @@ data(){
   </div>
 </template>
 ```
-  Esto está muy bien, pero lo suyo sería tener un componente por cada usuario que sea el que tiene dentro de cada uno de los usuarios:
+  Esto está muy bien, pero lo suyo sería tener un componente por cada usuario que sea el que tiene dentro de cada uno de los usuarios. Empezamos con el componente:
+```javascript
+Vue.component('usuario', {
+  props:['datos'],
+  template: '#usuario-template',
+});
+```
+  Y creamos un template más en el html:
+```html
+<template id="usuario-template">
+  <div class="usuario">
+    <img align="left" :src="datos.foto" :alt="datos.nombre">
+    <section>
+      <h2> {{ datos.nombre }}</h2>
+      <small> {{ datos.email }} </small>
+    </section>
+  </div>
+</template>
+```
