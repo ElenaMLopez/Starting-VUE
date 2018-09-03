@@ -6,8 +6,10 @@
   </head>
   <body>
     <main>
-      <h1 > Hola mundo!</h1>
+      <h1 > {{titulo}} </h1>
+      <h2> {{mensaje}} </h2>
       <input v-model="mensaje" type="text" name="" value="">
+      <p> Si cambias el texto del input verás un ejemplo de databinding con el titulo del h2... :)</p>
       <pre>{{$data}}</pre> <!-- Esta es la ¡Variable de Conveniencia' -->
     </main>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" charset="utf-8"></script>

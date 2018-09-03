@@ -15,6 +15,7 @@ new Vue({
   // Definimos la segunda propiedad: data, que tendrá la fuente de datos
   // y en este caso tan solo se establece como fuente, mensaje con sus datos
   data: {
-    mensaje: 'Cucú mundo! desde el mensaje de la instancia de Vue'
+    mensaje: 'Cucú mundo! desde el mensaje de la instancia de Vue',
+    titulo: 'Titulo desde la instacia de vue: Cucú!!!'
   }
 })
