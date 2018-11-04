@@ -1,13 +1,16 @@
 <template>
-  
+  <tareas></tareas>
 </template>
 
 <script>
-export default {
-
-}
+  import Tareas from './components/Tareas.vue';
+  
+  export default {
+    components: {
+      Tareas
+    },
+  }
 </script>
 
 <style>
-
 </style>
