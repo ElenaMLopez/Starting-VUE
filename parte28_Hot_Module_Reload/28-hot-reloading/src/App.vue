@@ -1,5 +1,17 @@
 <template>
-  <tareas></tareas>
+  <div>
+    <h2> Lista que viene de App.js</h2>
+    <ul>
+      <li><a href="#">Enlace de App.js</a></li>
+      <li><a href="#">Enlace de App.js</a></li>
+      <li><a href="#">Enlace de App.js</a></li>
+      <li><a href="#">Enlace de App.js</a></li>
+      <li><a href="#">Enlace de App.js</a></li>
+      <li><a href="#">Enlace de App.js</a></li>
+    </ul>
+
+    <tareas></tareas>
+  </div>
 </template>
 
 <script>

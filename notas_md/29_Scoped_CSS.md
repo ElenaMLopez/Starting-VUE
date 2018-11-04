@@ -10,3 +10,34 @@ NOTA: En este caso y para no repetir código inecesariamente, se continúa con e
 ### Componente sin scope y con scope en el CSS:
 
 Partiendo del código anterior, imaginemos que dentro de App.js, tenemos una lista de enlaces de esta forma:
+```html
+<template>
+  <div>
+    <h2> Lista que viene de App.js</h2>
+    <ul>
+      <li><a href="#">Enlace de App.js</a></li>
+      <li><a href="#">Enlace de App.js</a></li>
+      <li><a href="#">Enlace de App.js</a></li>
+      <li><a href="#">Enlace de App.js</a></li>
+      <li><a href="#">Enlace de App.js</a></li>
+      <li><a href="#">Enlace de App.js</a></li>
+    </ul>
+
+    <tareas></tareas>
+  </div>
+</template>
+
+<script>
+  import Tareas from './components/Tareas.vue';
+  
+  export default {
+    components: {
+      Tareas
+    },
+  }
+</script>
+
+<style>
+</style>
+```
+Se aprecia al ejecutar la app que todos los enlaces tienen el mismo estilo, Este estilo viene en realidad del componente, al que se le aplicaron estilos en el ejercicio anterior. Si vemos el código del componente, podemos ver que en la sección \<style>\</style> se aplica estilo a los enlaces:
