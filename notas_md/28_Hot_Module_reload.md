@@ -10,6 +10,6 @@ Entre las caracteristicas de vue-loader tenemos el hot reload, que mantiene el e
 
 ### Ejemplo práctico: Componente tareas:
 
-Vamos a crear un componente tareas con un par de computed properties para filtrarlas, que solo se reevalúan cuando se cambian sus dependencias, cuando cambia alguna de las partes de la matriz de tareas en este caso, cuando cambia la fuente de verdad, es cuando la computed se activa.
+Vamos a crear un componente tareas con un par de computed properties para filtrarlas, que solo se reevalúan cuando se cambian sus dependencias, cuando cambia alguna de las partes de la matriz de tareas en este caso, cuando cambia la fuente de verdad, y es cuando la computed se activa.
 
-así creamos un nuevo proyecto llamado 28-hot-reloading y en su carpeta src la carpeta componentes con su archivo Tareas.vue.
+Así creamos un nuevo proyecto llamado 28-hot-reloading y en su carpeta src la carpeta componentes con su archivo Tareas.vue.
