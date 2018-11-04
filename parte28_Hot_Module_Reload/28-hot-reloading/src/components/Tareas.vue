@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   li a {
     color:goldenrod;
     font-size: 1.2em;
