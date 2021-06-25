@@ -49,7 +49,7 @@
 
   Con VUE utilizando la directiva v-on, podemos hacerlo fácilmente.
 
-  La directiva que controla eventoes es **v-on** y desde ahí se llama a la función *agregarTarea* pero esta función ha de estar **dentro de la instancia de VUE** y dentro de esta instancia ha de estar dentro de **methods**, de lo contrario no va a funcionar.
+  La directiva que controla eventos es **v-on** y desde ahí se llama a la función *agregarTarea* pero esta función ha de estar **dentro de la instancia de VUE** y dentro de esta instancia ha de estar dentro de **methods**, de lo contrario no va a funcionar.
 
 
   Para pasar el evento al que ha de reaccionar la directiva v-on se utilizan ':', como en ángular, al poner dos puntos es como si en los filtros pones dos puntos y pasas otro argumento, dos puntos y otro argumento... pues en este caso es similar. Se pone la directiva y con los dos puntos definimos el evento ante el que se reacciona, de la siguiente forma: **v-on:click**
@@ -108,7 +108,7 @@
    El siguiente paso es pasar a la lista la tarea que vamos a agregar, pero en vez de poner lo que pondríamos en Vanilla JavaScript navegando por el DOM, lo que hay que hacer es cambiar el *modelo*, que es la fuente de datos.
    Para ello modificamos el modelo, declarando NuevaTarea y lo dejamos vacío.Después de esto hay que decirle está relacionado con él en el DOM, en este caso el input donde metemos las nuevas tareas.
 
-    Ahora, desde el método agregarTarea() insertamos las nuevas tareas en este modelo. Para ello podemos usar *this*. Con VUE, en este caso *this* hace referencia a la instancia de VUE declarada, por lo que queda de esta forma:
+   Ahora, desde el método `agregarTarea()` insertamos las nuevas tareas en este modelo. Para ello podemos usar *this*. Con VUE, en este caso *this* hace referencia a la instancia de VUE declarada, por lo que queda de esta forma:
 
 ```html
    <main>
